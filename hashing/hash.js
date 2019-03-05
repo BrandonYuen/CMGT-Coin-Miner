@@ -3,6 +3,7 @@
 // Dependencies
 const crypto = require('crypto');
 const encodedArray = require('./encodedArray');
+const encodedArrayRecursion = require('./encodedArrayRecursion');
 const combineRows = require('./combineRows');
 const fillRow = require('./fillRow');
 
@@ -13,7 +14,7 @@ function hash(string) {
         STAP 2: Alle getallen worden gesplitst en los in een array geplaatst
     */
 
-    let numbersArray = encodedArray(string);
+    let numbersArray = encodedArrayRecursion(string);
 
     /*
         STAP 3: Uit deze array worden de eerste 2 blokken van 10 getallen gehaald

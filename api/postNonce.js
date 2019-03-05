@@ -8,7 +8,7 @@ function postNonce(nonce) {
         uri: 'http://programmeren9.cmgt.hr.nl:8000/api/blockchain',
         body: {
             nonce: nonce,
-            user: 'TheLegend27'
+            user: 'Brandon 0924495'
         },
         json: true // Automatically parses the JSON string in the response
     };

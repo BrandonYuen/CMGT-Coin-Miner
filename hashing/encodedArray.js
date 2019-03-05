@@ -5,9 +5,7 @@ function encodedArray(string) {
     let stringCopy = string.replace(/\s/g, '');
 
     let arrayOfNumbers = stringCopy.split('').reduce((done, char) => {
-        if (isLetter(char)) {
-            return done.concat(char.charCodeAt(0).toString().split('').map(Number));
-        }
+        if (isLetter(char)) return done.concat(char.charCodeAt(0).toString().split('').map(Number));
         return done.concat(parseInt(char));
     }, []);
 

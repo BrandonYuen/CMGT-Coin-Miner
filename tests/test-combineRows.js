@@ -3,7 +3,7 @@ var expect = require('chai').expect;
 const combineRows = require('../hashing/combineRows');
 
 describe('combineRows()', function () {
-  it('should return an array of numbers encoded with ASCII', function () {
+  it('should combine first two child-arrays untill one row is left', function () {
     
     // 1. ARRANGE
     let inputArray = [

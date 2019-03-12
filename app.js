@@ -12,7 +12,8 @@ function startMining() {
     while (!nonce.valid && !isExpired(lastBlock)) {
 
         // Create base
-        let base = baseStringForNewBlock(hashOfLastBlock());
+        let hashOfLast = hashOfLastBlock();
+        let base = baseStringForNewBlock(hashOfLast);
     
         // Try new nonce
         nonce.value++;
@@ -56,6 +57,12 @@ function updateLastBlock() {
     console.log('[UPDATING LAST BLOCK]')
     API.getLastBlock()
     .then( (res) => {
+        // If pending
+        if (!res.open) {
+            console.log('Blockchain is pending ('+res.countdown+')');
+            return
+        }
+
         // Update lastblock
         lastBlock = res;
 

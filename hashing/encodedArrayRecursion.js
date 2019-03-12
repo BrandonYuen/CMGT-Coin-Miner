@@ -4,7 +4,7 @@ const isLetter = require('./isLetter');
 
 function encodedArrayRecursion(string, array=[]) {
 
-    // Remove whitespce
+    // Remove whitespace
     let stringCopy = string.replace(/\s/g, '');
 
     // The new array
